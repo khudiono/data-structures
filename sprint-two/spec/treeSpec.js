@@ -21,6 +21,11 @@ describe('tree', function() {
     expect(tree.contains(5)).to.equal(true);
   });
 
+  it('should return false for a value that the tree does not contains', function() {
+    tree.addChild(5);
+    expect(tree.contains(4)).to.equal(false);
+  });
+
   it('should return false for a value that was not added', function() {
     tree.addChild(5);
     expect(tree.contains(6)).to.equal(false);
@@ -39,6 +44,10 @@ describe('tree', function() {
     tree.children[1].addChild(8);
     expect(tree.contains(7)).to.equal(true);
     expect(tree.contains(8)).to.equal(true);
+  });
+
+  it('should detect empty tree', function() {
+    expect(tree.contains(1)).to.equal(false);
   });
 
 });

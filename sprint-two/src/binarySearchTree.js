@@ -31,9 +31,9 @@ binaryMethods.contains = function(target) {
     return true;
   }
   if(this.left && target < this.value){
-    return this.left.contains(target)
+    return this.left.contains(target);
   }else if (this.right && target > this.value){
-    return this.right.contains(target)
+    return this.right.contains(target);
   }
   return false;
 };

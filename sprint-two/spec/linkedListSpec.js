@@ -59,5 +59,5 @@ describe('linkedList', function() {
     expect(linkedList.head.value).to.equal(1);
     linkedList.removeHead();
     expect(linkedList.head.value).to.equal(nextNode);
-  })
+  });
 });

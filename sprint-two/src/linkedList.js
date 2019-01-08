@@ -26,7 +26,6 @@ var LinkedList = function() {
     }else{
       var previousHead = list.head.value;
       list.head = list.head.next;
-      console.log(previousHead,list.head.next, list.head.value)
       return previousHead;
     }
   };

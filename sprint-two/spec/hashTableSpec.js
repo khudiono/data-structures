@@ -47,6 +47,11 @@ describe('hashTable', function() {
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
 
+  it('should return undefined when retrieving keys not in table', function() {
+    hashTable.insert('Steven', 'Spielberg');
+    expect(hashTable.retrieve('Mark')).to.equal(undefined);
+  });
+
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   xit ('should double in size when needed', function() {
     _.each(people, function(person) {
