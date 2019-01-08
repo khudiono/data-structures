@@ -43,7 +43,7 @@ HashTable.prototype.remove = function(k) {
     if (bucket[i][0] === k){
       bucket.splice(i,1);
     }
-  };
+  }
 };
 
 

@@ -28,8 +28,7 @@ var LinkedList = function() {
     while (current) {
       if (current.value === target) {
         return true;
-      }
-      else{
+      }else{
         current = current.next;
       }
     }

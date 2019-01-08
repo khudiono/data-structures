@@ -24,7 +24,7 @@ treeMethods.contains = function(target) {
       }else if (child.children.length > 0){
         search(child.children);
       }
-    })
+    });
   };
 
   search(this.children);

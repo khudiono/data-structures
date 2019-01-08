@@ -32,7 +32,7 @@ Graph.prototype.removeNode = function(node) {
 Graph.prototype.hasEdge = function(fromNode, toNode) {
   if (this.storage[fromNode].edges.includes(toNode)) {
     return true;
-  };
+  }
   return false;
 };
 
@@ -57,7 +57,7 @@ Graph.prototype.forEachNode = function(cb) {
     this.storage[node].edges.forEach(function(edge){
       cb(edge);
     });
-  };
+  }
 };
 
 /*

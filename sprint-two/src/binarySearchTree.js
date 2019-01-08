@@ -1,10 +1,10 @@
-var BinarySearchTree = function(value) {
-	var nodes = Object.create(binaryMethods);
-	nodes.value = value;
-	nodes.right = null;
+var BinarySearchTree = fu     (v  alue) {
+  var nodes = Object.create(binaryMethods);
+  nodes.value = value;
+  nodes.right = null;
   nodes.left = null;
 
-	return nodes;
+  return nodes;
 };
 
 var binaryMethods = {};
@@ -30,29 +30,27 @@ binaryMethods.contains = function(target) {
   if (this.value === target) {
     return true;
   }
-
   if(this.left && target < this.value){
-    return this.left.contains(target);
-  }else if(this.right && target > this.value){
-    return this.right.contains(target);
+    return this.left.contains(target)
+  }else if (this.right && target > this.value){
+    return this.right.contains(target)
   }
-
   return false;
 };
 
 binaryMethods.depthFirstLog = function(cb) {
-	cb(this.value);
-	if(this.left) {
-		this.left.depthFirstLog(cb);
-	}
-	if(this.right) {
-		this.right.depthFirstLog(cb);
-	}
+  cb(this.value);
+  if(this.left) {
+    this.left.depthFirstLog(cb);
+  }
+  if(this.right) {
+    this.right.depthFirstLog(cb);
+  }
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
- 	insert: O(log n)
-	contains: O(log n)
-	depthFirstLog: O(n)
+  insert: O(log n)
+  contains: O(log n)
+  depthFirstLog: O(n)
  */
