@@ -7,24 +7,24 @@ class Queue {
     this.start = 0;
     this.last = 0;
   }
-//methods
+  //methods
 
-enqueue(value) {
-  ++this.last;
-  this.storage[this.last] = value;
-}
-
-dequeue() {
-  if (this.last - this.start > 0) {
-    ++this.start;
-    var val = this.storage[this.start];
-    delete this.storage[this.start];
-    return val;
+  enqueue(value) {
+    ++this.last;
+    this.storage[this.last] = value;
   }
-}
 
-size(){
-  return this.last - this.start;
-}
+  dequeue() {
+    if (this.last - this.start > 0) {
+      ++this.start;
+      var val = this.storage[this.start];
+      delete this.storage[this.start];
+      return val;
+    }
+  }
+
+  size() {
+    return this.last - this.start;
+  }
 
 }

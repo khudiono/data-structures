@@ -25,4 +25,4 @@ var queueMethods = {
   size: function(){
     return this.last - this.start;
   }
-}
+};

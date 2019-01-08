@@ -14,10 +14,10 @@ class Stack {
 
   pop(){
     if (this.sizeI > 0){
-    var val = this.storage[this.sizeI -1];
-    delete this.storage[this.sizeI -1];
-    this.sizeI--;
-    return val;
+      var val = this.storage[this.sizeI - 1];
+      delete this.storage[this.sizeI - 1];
+      this.sizeI--;
+      return val;
     }
   }
 

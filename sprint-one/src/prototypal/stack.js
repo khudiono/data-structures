@@ -15,14 +15,14 @@ var stackMethods = {
   },
 
   pop: function() {
-      if (this.sizeI > 0){
+    if (this.sizeI > 0) {
       var val = this.storage[this.sizeI -1];
       delete this.storage[this.sizeI -1];
       this.sizeI--;
       return val;
-      }
+    }
   },
   size: function(){
-   return this.sizeI;
+    return this.sizeI;
   }
 };

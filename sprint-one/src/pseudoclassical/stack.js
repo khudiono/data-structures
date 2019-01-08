@@ -9,18 +9,18 @@ var Stack = function() {
 Stack.prototype.push = function(value){
   this.storage[this.sizeI] = value;
   this.sizeI++;
-}
+};
 
 Stack.prototype.pop = function(){
-  if (this.sizeI > 0){
+  if (this.sizeI > 0) {
     var val = this.storage[this.sizeI -1];
     delete this.storage[this.sizeI -1];
     this.sizeI--;
     return val;
   }
-}
+};
 
 Stack.prototype.size = function(){
   return this.sizeI;
-}
+};
 
