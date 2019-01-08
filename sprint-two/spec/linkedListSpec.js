@@ -52,4 +52,12 @@ describe('linkedList', function() {
   });
 
   // add more tests here to test the functionality of linkedList
+  it('should reassign head to the next node when calling removeHead', function(){
+    linkedList.addToTail(1);
+    linkedList.addToTail(2);
+    var nextNode = linkedList.head.next.value;
+    expect(linkedList.head.value).to.equal(1);
+    linkedList.removeHead();
+    expect(linkedList.head.value).to.equal(nextNode);
+  })
 });

@@ -1,4 +1,4 @@
-var BinarySearchTree = fu     (v  alue) {
+var BinarySearchTree = function (value) {
   var nodes = Object.create(binaryMethods);
   nodes.value = value;
   nodes.right = null;
