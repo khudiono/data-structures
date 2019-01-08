@@ -1,8 +1,7 @@
-
-
 // Instantiate a new graph
 var Graph = function() {
   this.storage = {};
+  this.vertices = [];
 };
 
 // Add a node to the graph, passing in the node's value.
@@ -11,7 +10,9 @@ Graph.prototype.addNode = function(node) {
     'edges': []
   };
 };
-
+Graph.prototype.addVertex = function (val) {
+  this.vertices.push(val);
+};
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
   return this.storage.hasOwnProperty(node);
